@@ -1,0 +1,23 @@
+<%- include header %>
+<div class="panel panel-default" style="border-radius: 5px;opacity: 0.8;">
+	<div class="panel-body">
+<form method="post">
+	<div class="form-group col-sm-11">
+		<label for="">标题:</label>
+		<input type="text" class="form-control" name="title" value="<%= post.title %>" />
+	</div>
+	<div class="form-group">
+		<div class="col-sm-11">
+			<label for="">正文:</label>
+			<textarea class="form-control" name="content" rows="5" cols="95" style="border: 1px solid #ccc;overflow:hidden;border-radius:4px;"><%= post.post %></textarea>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-1">
+			<button type="submit" class="btn btn-primary">保存修改</button>
+		</div>
+	</div>
+</form>
+</div>
+</div>
+<%- include footer %>

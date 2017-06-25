@@ -1,0 +1,20 @@
+<%- include header %>
+  <div class="main">
+	<ul class="cbp_tmtimeline">
+	<% posts.forEach(function (post, index) { %>
+		<li>
+			<time class="cbp_tmtime" datetime="<%= post.time.minute %>"><span style="font-size:18px;"><%= post.time.minute %></span></time>
+			<div class="cbp_tmicon cbp_tmicon-phone"></div>
+			<div class="cbp_tmlabel">
+			<h2><a style="color:#fff" href="u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a></h2>
+			<p class="info">
+				<span class="label label-info">作者</span>：<a style="color: #FFFFFF" href="u/<%= post.name %>"><%= post.name %></a> |
+				<span class="label label-warning">日期</span>：<%= post.time.minute %>
+  			</p>
+			<p><%- post.post %></p>
+			</div>
+		</li>
+	<% }) %>
+	</ul>
+</div>
+<%- include footer %>

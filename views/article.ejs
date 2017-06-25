@@ -1,0 +1,25 @@
+<%- include header %>
+<div class="panel panel-default" style="border-radius: 5px;">
+<div class="panel-body">
+<div class="form-group" style="margin-top: 10px;">
+	<% if(user && (user.name == post.name)) { %>
+		<span><a class="btn btn-info" href="/edit/<%= post.name %>/<%= post.time.day %>/<%= post.title %>">编辑</a></span>
+		<span><a class="btn btn-warning" href="/remove/<%= post.name %>/<%= post.time.day %>/<%= post.title %>">删除</a></span>
+	<% } %>	
+</div>
+</div>
+<div class="panel-body">
+<h3><%= post.title %></h3>
+<p class="lead">
+	<span class="label label-info">作者</span>：<a href="/u/<%= post.name %>"><%= post.name %></a> |
+	<span class="label label-warning">日期</span>：<%= post.time.minute %>
+</p>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<p><%- post.post %></p>
+</div>
+</div>
+</div>
+<%- include comment %>
+<%- include footer %>

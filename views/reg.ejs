@@ -1,0 +1,29 @@
+<%- include header %>
+<div class="panel panel-default" style="border-radius: 5px;opacity: 0.8;">
+	<div class="panel-body">
+		<form method="post">
+			<div class="form-group col-md-8">
+				<label for="username">用户名:</label>
+				<input type="text" class="form-control" name="name"/>
+			</div>
+			<div class="form-group col-md-8">
+				<label for="username">密码:</label>
+				<input type="password" class="form-control" name="password"/>
+			</div>
+			<div class="form-group col-md-8">
+				<label for="username">确认密码:</label>
+				<input type="password" class="form-control" name="password-repeat"/>
+			</div>
+			<div class="form-group col-md-8">
+				<label for="username">邮箱:</label>
+				<input type="email" class="form-control" name="email"/>
+			</div>
+			<div class="form-group col-md-8">
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary">注册</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<%- include footer %>
